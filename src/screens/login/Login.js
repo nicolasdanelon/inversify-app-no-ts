@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Screen from '../../Components/Screen';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const eng = 'http://www.mocky.io/v2/5ec29a292f000003b1c3546e';
 const spa = 'http://www.mocky.io/v2/5ec29a162f000066cac3546d';
@@ -31,6 +31,7 @@ const Login = () => {
             <div className="row">
                 <input type="password" defaultValue="123123123" />
             </div>
+            <Link to="/dashboard">Go to dashboard</Link>
             <div className="row">
                 <div className="col">
                     <button onClick={() => login(eng)} disabled={loading} className="button dark">
