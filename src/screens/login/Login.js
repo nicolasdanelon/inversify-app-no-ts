@@ -31,7 +31,6 @@ const Login = () => {
             <div className="row">
                 <input type="password" defaultValue="123123123" />
             </div>
-            <Link to="/dashboard">Go to dashboard</Link>
             <div className="row">
                 <div className="col">
                     <button onClick={() => login(eng)} disabled={loading} className="button dark">
