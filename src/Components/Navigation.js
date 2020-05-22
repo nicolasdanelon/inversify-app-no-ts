@@ -6,7 +6,7 @@ import Login from '../screens/login/Login';
 const Navigation = ({ children }) => (
     <Router>
         <Switch>
-            <Route path="/dashboard">
+            <Route path="/dashboard/:lang">
                 <Dashboard />
             </Route>
             <Route path="/">

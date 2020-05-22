@@ -13,8 +13,6 @@ const Provider = ({ container, children }) => {
 export const useInjection = (identifier) => {
     const { container } = useContext(InversifyContext);
 
-    console.log({ container, identifier });
-
     if (!container) { throw new Error(); }
     return container.get(identifier);
 };

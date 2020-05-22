@@ -1,11 +1,9 @@
 import React from 'react';
 import Screen from '../../Components/Screen';
-// import { useInjection } from '../../InjectionProvider';
-import WelcomeEn from '../welcome/WelcomeEn';
+import { useInjection } from '../../InjectionProvider';
 
 const Login = ({ children }) => {
-    // const Greeting = useInjection('greetingProvider').provide();
-    const Greeting = WelcomeEn();
+    const Greeting = useInjection('greetingProvider').provide();
 
     return (
         <Screen>

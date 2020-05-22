@@ -10,16 +10,16 @@ const Login = () => {
     const [loading, setLoading] = useState(false);
 
     const login = async endPoint => {
-        setLoading(true);
-        try {
-            const response = await fetch(endPoint);
-            const responseLang = await response.json();
-            const { lang } = responseLang;
+       setLoading(true);
+       try {
+           const response = await fetch(endPoint);
+           const responseLang = await response.json();
+           const { lang } = responseLang;
 
-            history.push(`/dashboard?lang=${lang}`);
-        } catch (e) {
-            setLoading(false);
-        }
+           history.push(`/dashboard/${lang}`);
+       } catch (e) {
+           setLoading(false);
+       }
     };
 
     return (
